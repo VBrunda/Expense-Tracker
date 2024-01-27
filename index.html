@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
+    <title>Expense Tracker</title>
+</head>
+
+<body>
+    <div class="container">
+            <div class="output-wrapper">
+                <div>
+                    <p>Total Budget</p>
+                    <span id="output-total-amount">0</span>
+                </div>
+                <div>
+                    <p>Expenses</p>
+                    <span id="output-expense-amount">0</span>
+                </div>
+                <div>
+                    <p>Balance</p>
+                    <span id="output-balance-amount">0</span>
+                </div>
+            </div>
+            <div class="tabs">
+                <input type="radio" name="tabs" id="tab-1" checked>
+                <label for="tab-1">Budget & Expenses</label>
+                <div class="input-wrapper tab-content">
+                    <div class="budget flex">
+                        <h3>Budget</h3>
+                        <input type="number" name="total-amount" id="total-amount" placeholder="Enter Total Amount">
+                        <button type="submit" id="total-amount-button">Set Budget</button>
+                    </div>
+                    <div class="expenses flex">
+                        <h3>Expenses</h3>
+                        <input type="text" name="expenses-name" id="ename" placeholder="Enter Expense Details">
+                        <input type="number" name="expenses-amount" id="eamount" placeholder="Enter Expense Amount">
+                        <button type="submit" id="exp-amount-button">Check Amount</button>
+                    </div>
+                </div>
+
+                <input type="radio" name="tabs" id="tab-2">
+                <label for="tab-2">Expenses List</label>
+                <div class="output-list tab-content">
+                    <h3>Expense List</h3>
+                    <div id="list">
+                        <!-- <div class="sub-list">
+                        <p class="expname">name</p>
+                        <p class="expamount">amount</p>
+                        <button class="fa-solid fa-pen-to-square edit"></button>
+                        <button class="fa-solid fa-trash-can delete"></button>
+                    </div> -->
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script src="https://kit.fontawesome.com/e38aa1cb73.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
