@@ -36,8 +36,17 @@
                     </div>
                     <div class="expenses flex">
                         <h3>Expenses</h3>
-                        <input type="text" name="expenses-name" id="ename" placeholder="Enter Expense Details">
+                        <input type="text" name="expenses-name" list="expense-list" id="ename" placeholder="Enter Expense Details">
+                        <datalist id="expense-list">
+                            <option value="Food">
+                            <option value="Groceries">
+                            <option value="Shopping">
+                            <option value="Bills">
+                            <option value="Rent">
+                            <option value="Others">
+                        </datalist>
                         <input type="number" name="expenses-amount" id="eamount" placeholder="Enter Expense Amount">
+                        
                         <button type="submit" id="exp-amount-button">Check Amount</button>
                     </div>
                 </div>
@@ -57,6 +66,14 @@
                 </div>
             </div>
     </div>
+
+    <input type="text" list="my-list" id="my-input">
+<datalist id="my-list">
+  <option value="Option 1">
+  <option value="Option 2">
+  <option value="Option 3">
+  <!-- Add more options as needed -->
+</datalist>
     <script src="https://kit.fontawesome.com/e38aa1cb73.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>

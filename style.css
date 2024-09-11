@@ -181,6 +181,34 @@ input[type=radio]{
     justify-content: center;
 }
 
+#my-input {
+    width: 200px; /* Set the desired width of the input field */
+  }
+  
+  #my-list {
+    position: absolute;
+    width: 100%; /* Match the width of the input field */
+    border: 1px solid #ccc; /* Match the border of the input field */
+    box-sizing: border-box; /* Include the border in the total width */
+    display: none; /* Hide the datalist by default */
+  }
+  
+  #my-input:focus + #my-list, #my-list:focus {
+    display: block; /* Show the datalist when the input field is focused */
+  }
+  
+  /* Set the width of the datalist to be the same as the width of the input field, and make it responsive to window resizing */
+  #my-list {
+    width: calc(100% - 2px); /* Subtract the border width from the total width */
+    max-width: 100%; /* Prevent the datalist from becoming wider than the window */
+  }
+  
+  /* Make the input field responsive to window resizing */
+  #my-input {
+    width: calc(20% - 2px); /* Set the width to be 20% of the window width, minus the border width */
+    max-width: 100%; /* Prevent the input field from becoming wider than the window */
+  }
+  
 @media (max-width: 768px){
     .tabs input[type="radio"]:checked +label + .tab-content{
         flex-direction: column;
